@@ -1,0 +1,38 @@
+.valign {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu{
+  display: inline-block;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.menu:hover{
+  transform: scale(1.4);
+}
+
+.content{
+	background:white;
+	width: 100%;
+	height: 500px;
+}
+
+.isi{
+	background-color:white;
+	height:100%;
+	width: 36%;
+	overflow-y:auto;
+	overflow-x: hidden;
+	font-family:candara;
+	font-size:17px;
+	line-height:1.5;
+	padding:2%;
+	text-align: justify ;
+	color:black;
+	float:left;
+	margin:0.5%;
+}
