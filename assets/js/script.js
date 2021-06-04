@@ -4,6 +4,8 @@ window.onload = function awal(){
    document.getElementById("petunjuk").hidden = true; 
 };
 
+window.localStorage;
+
 function info(){
    document.getElementById("info").hidden = false;
    document.getElementById("dafus").hidden = true;
@@ -39,6 +41,7 @@ window.onload = function awalMateri(){
 };
 
 function satu(){
+   document.getElementById("btnprev").classList.add('disabled'); 
    document.getElementById("satu").hidden = false;
    document.getElementById("btnsatu").classList.add('active');
    document.getElementById("dua").hidden = true;
@@ -47,9 +50,11 @@ function satu(){
    document.getElementById("btntiga").classList.remove('active'); 
    document.getElementById("empat").hidden = true;
    document.getElementById("btnempat").classList.remove('active'); 
+   document.getElementById("next").setAttribute( "onClick", "javascript: dua();" );
 }
 
 function dua(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
    document.getElementById("satu").hidden = true;
    document.getElementById("btnsatu").classList.remove('active');
    document.getElementById("dua").hidden = false;
@@ -57,10 +62,13 @@ function dua(){
    document.getElementById("tiga").hidden = true;
    document.getElementById("btntiga").classList.remove('active'); 
    document.getElementById("empat").hidden = true;
-   document.getElementById("btnempat").classList.remove('active'); 
+   document.getElementById("btnempat").classList.remove('active');
+   document.getElementById("next").setAttribute( "onClick", "javascript: tiga();" );
+   document.getElementById("prev").setAttribute( "onClick", "javascript: satu();" );
 }
 
 function tiga(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
    document.getElementById("satu").hidden = true;
    document.getElementById("btnsatu").classList.remove('active');
    document.getElementById("dua").hidden = true;
@@ -69,9 +77,12 @@ function tiga(){
    document.getElementById("btntiga").classList.add('active'); 
    document.getElementById("empat").hidden = true;
    document.getElementById("btnempat").classList.remove('active'); 
+   document.getElementById("next").setAttribute( "onClick", "javascript: empat();" );
+   document.getElementById("prev").setAttribute( "onClick", "javascript: dua();" );
 }
 
 function empat(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
    document.getElementById("satu").hidden = true;
    document.getElementById("btnsatu").classList.remove('active');
    document.getElementById("dua").hidden = true;
@@ -80,4 +91,7 @@ function empat(){
    document.getElementById("btntiga").classList.remove('active'); 
    document.getElementById("empat").hidden = false;
    document.getElementById("btnempat").classList.add('active'); 
+   document.getElementById("btnnext").classList.add('disabled'); 
+   document.getElementById("prev").setAttribute( "onClick", "javascript: tiga();" );
+   document.getElementById("mnext").hidden = false;
 }
