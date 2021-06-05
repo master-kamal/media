@@ -286,12 +286,19 @@
                     <div class="row mt-1">
                         <nav aria-label="...">
                             <ul class="pagination">
-                                <li class="page-item active"  id="btnsatu"><a class="page-link" onclick="satu();" style="cursor: pointer;">1</a></li>
-                                <li class="page-item" id="btndua"><a class="page-link" onclick="dua();" style="cursor: pointer;">2</a></li>
-                                <li class="page-item" id="btntiga"><a class="page-link" onclick="tiga();" style="cursor: pointer;">3</a></li>
-                                <li class="page-item" id="btnempat"><a class="page-link" onclick="empat();" style="cursor: pointer;">4</a></li>
-                              </ul>
-                          </nav>
+                              <li class="page-item disabled" id="btnprev">
+                                <a class="page-link" id="prev" onclick="" tabindex="-1" aria-disabled="true" style="cursor: pointer;">Previous</a>
+                              </li>
+                              <li class="page-item active"  id="btnsatu"><a class="page-link" onclick="satu();" style="cursor: pointer;">1</a></li>
+                              <li class="page-item" id="btndua"><a class="page-link" onclick="dua();" style="cursor: pointer;">2</a></li>
+                              <li class="page-item" id="btntiga"><a class="page-link" onclick="tiga();" style="cursor: pointer;">3</a></li>
+                              <li class="page-item" id="btnempat"><a class="page-link" onclick="empat();" style="cursor: pointer;">4</a></li>
+                              <li class="page-item" id="btnnext">
+                                <a id="next" class="page-link" onclick="dua();" style="cursor: pointer;">Next</a>
+                              </li>
+                              <a class="btn btn-primary ml-2" id="mnext" href="sub4_2.html" hidden>Materi Selanjutnya</a>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

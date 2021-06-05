@@ -95,3 +95,70 @@ function empat(){
    document.getElementById("prev").setAttribute( "onClick", "javascript: tiga();" );
    document.getElementById("mnext").hidden = false;
 }
+
+window.onload = function awalMateri2(){
+   document.getElementById("satu").hidden = false;
+   document.getElementById("dua").hidden = true;
+};
+
+function satu2(){
+   document.getElementById("btnprev").classList.add('disabled'); 
+   document.getElementById("satu").hidden = false;
+   document.getElementById("btnsatu").classList.add('active');
+   document.getElementById("dua").hidden = true;
+   document.getElementById("btndua").classList.remove('active');
+   document.getElementById("next").setAttribute( "onClick", "javascript: dua2();" );
+}
+
+function dua2(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
+   document.getElementById("satu").hidden = true;
+   document.getElementById("btnsatu").classList.remove('active');
+   document.getElementById("dua").hidden = false;
+   document.getElementById("btndua").classList.add('active');
+   document.getElementById("btnnext").classList.add('disabled'); 
+   document.getElementById("prev").setAttribute( "onClick", "javascript: satu2();" );
+   document.getElementById("mnext").hidden = false;
+}
+
+window.onload = function awalMateri3(){
+   document.getElementById("satu").hidden = false;
+   document.getElementById("dua").hidden = true;
+   document.getElementById("tiga").hidden = true; 
+};
+
+function satu3(){
+   document.getElementById("btnprev").classList.add('disabled'); 
+   document.getElementById("satu").hidden = false;
+   document.getElementById("btnsatu").classList.add('active');
+   document.getElementById("dua").hidden = true;
+   document.getElementById("btndua").classList.remove('active');
+   document.getElementById("tiga").hidden = true;
+   document.getElementById("btntiga").classList.remove('active'); 
+   document.getElementById("next").setAttribute( "onClick", "javascript: dua3();" );
+}
+
+function dua3(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
+   document.getElementById("satu").hidden = true;
+   document.getElementById("btnsatu").classList.remove('active');
+   document.getElementById("dua").hidden = false;
+   document.getElementById("btndua").classList.add('active');
+   document.getElementById("tiga").hidden = true;
+   document.getElementById("btntiga").classList.remove('active'); 
+   document.getElementById("next").setAttribute( "onClick", "javascript: tiga3();" );
+   document.getElementById("prev").setAttribute( "onClick", "javascript: satu3();" );
+}
+
+function tiga3(){
+   document.getElementById("btnprev").classList.remove('disabled'); 
+   document.getElementById("satu").hidden = true;
+   document.getElementById("btnsatu").classList.remove('active');
+   document.getElementById("dua").hidden = true;
+   document.getElementById("btndua").classList.remove('active');
+   document.getElementById("tiga").hidden = false;
+   document.getElementById("btntiga").classList.add('active'); 
+   document.getElementById("prev").setAttribute( "onClick", "javascript: dua3();" );
+   document.getElementById("btnnext").classList.add('disabled'); 
+   document.getElementById("mnext").hidden = false;
+}
